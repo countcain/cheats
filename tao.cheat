@@ -1,0 +1,18 @@
+% tao
+
+# brew services restart
+brew services restart <service>
+
+# polly
+cd ~/briza/briza-api/api && npm run test:integration:no-container -- <file>.test.ts --testNamePattern="<pattern>"
+
+# polly record
+cd ~/briza/briza-api/api && npm run test:integration:no-container:polly-record -- <file>.test.ts --testNamePattern="<pattern>"
+
+# open a github pull request
+gh pr create -a @me -t "<title>"
+
+# format json
+npx pretty-quick --pattern <git_changed_path>
+
+$ git_changed_path: git status --short | awk '{print $NF}'
