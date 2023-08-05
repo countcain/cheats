@@ -1,7 +1,9 @@
-% tao
+% homebrew
 
 # brew services restart
 brew services restart <service>
+
+% briza
 
 # polly
 cd ~/briza/briza-api/api && npm run test:integration:no-container -- <file>.test.ts --testNamePattern="<pattern>"
@@ -9,8 +11,14 @@ cd ~/briza/briza-api/api && npm run test:integration:no-container -- <file>.test
 # polly record
 cd ~/briza/briza-api/api && npm run test:integration:no-container:polly-record -- <file>.test.ts --testNamePattern="<pattern>"
 
+% git
+
 # open a github pull request
 gh pr create -a @me -t "<title>"
+# copy last git commit
+git rev-parse --short HEAD | pbc
+
+% util
 
 # format json
 npx pretty-quick --pattern <git_changed_path>
